@@ -52,10 +52,6 @@ Se desejar contribuir para este projeto, por favor, siga estas etapas:
 4. Envie a branch para o repositório remoto (`git push origin minha-nova-feature`).
 5. Crie uma Pull Request.
 
-## Licença
-
-Este projeto é licenciado sob a licença [MIT](LICENSE).
-
 ## Contato
 
 Se você tiver alguma dúvida ou sugestão, sinta-se à vontade para me contatar.
