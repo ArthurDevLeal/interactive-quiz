@@ -2,9 +2,11 @@
 let manyQuestions = questions.length;
 let currentQuestion = 0;
 let correctQuestions = 0;
+let numberOfQuestion = [];
 renderQuestion();
 // Events
-document.querySelector(".scoreArea button").addEventListener("click", reset);
+document.querySelector(".scoreArea .reset").addEventListener("click", reset);
+document.querySelector(".scoreArea .sumary").addEventListener("click", sumary);
 
 // Functions
 function renderQuestion() {
@@ -36,6 +38,8 @@ function optionClickEvent(e, q) {
     let clickedOption = e.target.getAttribute("data-op");
     if (questions[currentQuestion].answer === parseInt(clickedOption)) {
         ++correctQuestions;
+    } else {
+        numberOfQuestion.push(currentQuestion);
     }
     ++currentQuestion;
     renderQuestion();
@@ -47,9 +51,33 @@ function finishQuiz() {
 
     document.querySelector(".scorePct").innerHTML = `Acertou ${Math.floor((correctQuestions / manyQuestions) * 100)}%`;
     document.querySelector(".scoreText2").innerHTML = `Você respondeu ${manyQuestions} questões e acertou ${correctQuestions}.`;
+    console.log(numberOfQuestion);
 }
 function reset() {
     currentQuestion = 0;
     correctQuestions = 0;
+    numberOfQuestion = [];
     renderQuestion();
+}
+function sumary() {
+    let html = ""
+    if (numberOfQuestion.length > 0) {
+        html = `<div class="question">Voce errou as questoes de numero: </div>`;
+    } else {
+        html = `<div class="question">Voce não errou nenhuma questão, parabens! </div>`;
+    }
+
+    for (let i = 0; i < numberOfQuestion.length; i++) {
+        html += `<div class="option center">${parseInt(numberOfQuestion[i]) + 1}</div>`;
+    }
+    html += `<button class="backToScore">Voltar</button>`;
+    document.querySelector(".divSumary").innerHTML = html;
+    document.querySelector(".scoreArea").style.display = "none";
+    document.querySelector(".divSumary").style.display = "block";
+
+    document.querySelector(".backToScore").addEventListener("click", backToScore);
+}
+function backToScore() {
+    document.querySelector(".scoreArea").style.display = "block";
+    document.querySelector(".divSumary").style.display = "none";
 }
