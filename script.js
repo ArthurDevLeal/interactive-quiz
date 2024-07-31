@@ -60,7 +60,7 @@ function reset() {
     renderQuestion();
 }
 function sumary() {
-    let html = ""
+    let html = "";
     if (numberOfQuestion.length > 0) {
         html = `<div class="question">Voce errou as questoes de numero: </div>`;
     } else {
@@ -68,8 +68,9 @@ function sumary() {
     }
 
     for (let i = 0; i < numberOfQuestion.length; i++) {
-        html += `<div class="option center">${parseInt(numberOfQuestion[i]) + 1}</div>`;
+        html += `<div class="option center" style="cursor: default;">${parseInt(numberOfQuestion[i]) + 1}</div>`;
     }
+
     html += `<button class="backToScore">Voltar</button>`;
     document.querySelector(".divSumary").innerHTML = html;
     document.querySelector(".scoreArea").style.display = "none";
