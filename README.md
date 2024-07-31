@@ -14,6 +14,7 @@ Você pode visualizar o projeto <a href="https://arthurdevleal.github.io/interac
 - **Perguntas Interativas**: Apresenta uma série de perguntas com múltiplas opções de resposta.
 - **Feedback Final**: Exibe a pontuação e uma mensagem de feedback ao término do quiz.
 - **Reiniciar Quiz**: Permite reiniciar o quiz a qualquer momento.
+- **Sumário dos Erros**: Exibe um sumário das questões que o usuário errou ao final do quiz.
 
 ## Instalação
 
