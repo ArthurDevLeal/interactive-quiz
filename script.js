@@ -19,7 +19,7 @@ function renderQuestion() {
         document.querySelector(".scoreArea").style.display = "none";
         document.querySelector(".questionArea").style.display = "block";
 
-        document.querySelector(".question").innerHTML = q.question;
+        document.querySelector(".question").innerHTML = `<span>${currentQuestion + 1}</span>${q.question}`;
 
         let optionsHtml = "";
         for (let i in q.options) {
