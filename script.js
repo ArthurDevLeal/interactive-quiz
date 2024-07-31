@@ -51,5 +51,5 @@ function finishQuiz() {
 function reset() {
     currentQuestion = 0;
     correctQuestions = 0;
-    renderQuestion()
+    renderQuestion();
 }
