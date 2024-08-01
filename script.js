@@ -6,7 +6,7 @@ let numberOfQuestion = [];
 renderQuestion();
 // Events
 document.querySelector(".scoreArea .reset").addEventListener("click", reset);
-document.querySelector(".scoreArea .sumary").addEventListener("click", sumary);
+document.querySelector(".scoreArea .sumary").addEventListener("click", makeSumary);
 
 // Functions
 function renderQuestion() {
@@ -59,7 +59,7 @@ function reset() {
     numberOfQuestion = [];
     renderQuestion();
 }
-function sumary() {
+function makeSumary() {
     let html = "";
     if (numberOfQuestion.length > 0) {
         html = `<div class="question">Voce errou as questoes de numero: </div>`;
@@ -68,7 +68,9 @@ function sumary() {
     }
 
     for (let i = 0; i < numberOfQuestion.length; i++) {
-        html += `<div class="option center" style="cursor: default;">${parseInt(numberOfQuestion[i]) + 1}</div>`;
+        html += `<div class="option" style="cursor: default;"><span>${parseInt(numberOfQuestion[i]) + 1}</span>${
+            questions[numberOfQuestion[i]].question
+        }</div>`;
     }
 
     html += `<button class="backToScore">Voltar</button>`;

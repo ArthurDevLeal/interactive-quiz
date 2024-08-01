@@ -60,6 +60,7 @@ h1 {
     color: #aaa;
     font-size: 16px;
     cursor: pointer;
+    padding-right: 2em;
 }
 span {
     display: flex;
@@ -119,6 +120,4 @@ button {
 button:hover {
     background-color: rgba(0, 0, 0, 0.4);
 }
-.center {
-    justify-content: center;
-}
+
