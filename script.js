@@ -62,7 +62,7 @@ function reset() {
 function makeSumary() {
     let html = "";
     if (numberOfQuestion.length > 0) {
-        html = `<div class="question">Voce errou as questoes de numero: </div>`;
+        html = `<div class="question">Voce errou as questoes: </div>`;
     } else {
         html = `<div class="question">Voce não errou nenhuma questão, parabens! </div>`;
     }
