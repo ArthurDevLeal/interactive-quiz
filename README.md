@@ -6,7 +6,7 @@ Este projeto é um quiz interativo desenvolvido utilizando HTML, CSS e JavaScrip
 
 O projeto simula um jogo de quiz onde o usuário responde a uma série de perguntas de múltipla escolha. O quiz utiliza CSS para o layout e estilo, e JavaScript para a lógica de exibição das perguntas, cálculo do progresso, e exibição do resultado final.
 
-Você pode visualizar o projeto <a href="https://interactive-quiz-psi.vercel.app" target="_blank">neste link</a>.
+Você pode visualizar o projeto <a href="https://arthurdevleal.github.io/interactive-quiz/" target="_blank">neste link</a>.
 
 ## Funcionalidades
 
